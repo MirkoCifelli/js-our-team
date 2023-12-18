@@ -42,10 +42,15 @@ const team = [
 ];
 
 // console .log(team);
+const cardContainer = document.getElementById('card-container');
+console.log('cardContainer', cardContainer, typeof cardContainer)
 
 
 for (let i = 0; i < team.length; i++) {
     for (const key in team[i]) {
         console.log(key + ':', team[i][key])
+        cardContainer.innerHTML += team[i][key];
     }
 }
+
+
