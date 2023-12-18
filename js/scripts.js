@@ -53,12 +53,34 @@ console.log('cardContainer', cardContainer, typeof cardContainer)
 //     }
 // }
 
-team.forEach(member => {
-    console.log(`Name: ${member.name}, Role: ${member.role}, Image: ${member.image}`);
-  });
+// team.forEach(member => {
+//     console.log(`Name: ${member.name}, Role: ${member.role}, Image: ${member.image}`);
+//   });
 
-team.forEach(member => {
-    const info = document.createElement("div");
-    info.innerHTML = `<p>Name: ${member.name}</p><p>Role: ${member.role}</p><p>Image: ${member.image}</p>`;
-    cardContainer.appendChild(info);
-  });
+// team.forEach(member => {
+//     const info = document.createElement("div");
+//     info.innerHTML = `<p>Name: ${member.name}</p><p>Role: ${member.role}</p><p>Image: ${member.image}</p>`;
+//     cardContainer.appendChild(info);
+//   });
+
+for (let i = 0; i < team.length; i++) {
+    const element = team[i];
+    cardContainer.innerHTML += `
+    <div class="col-4 my-5">
+        <div class="card">
+            <img src="./img/${element.image}" alt="${element.name}'s picture">
+        </div>
+        <div class="card-description p-2">
+            <h3 class="card-name mb-1">
+                ${element.name}
+            </h3>
+            <p class="card-role mb-2">
+                ${element.role}
+            </p>
+        </div>
+    </div>
+    
+    
+    `
+    
+}
