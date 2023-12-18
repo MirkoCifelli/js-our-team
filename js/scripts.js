@@ -66,7 +66,7 @@ console.log('cardContainer', cardContainer, typeof cardContainer)
 for (let i = 0; i < team.length; i++) {
     const element = team[i];
     cardContainer.innerHTML += `
-    <div class="col-4 my-5">
+    <div class="col-4 my-2">
         <div class="card">
             <img src="./img/${element.image}" alt="${element.name}'s picture">
         </div>
