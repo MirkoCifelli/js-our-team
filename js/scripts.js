@@ -46,22 +46,12 @@ const cardContainer = document.getElementById('card-container');
 console.log('cardContainer', cardContainer, typeof cardContainer)
 
 
-// for (let i = 0; i < team.length; i++) {
-//     for (const key in team[i]) {
-//         console.log(key + ':', team[i][key])
-//         cardContainer.innerHTML += team[i][key];
-//     }
-// }
-
-// team.forEach(member => {
-//     console.log(`Name: ${member.name}, Role: ${member.role}, Image: ${member.image}`);
-//   });
-
-// team.forEach(member => {
-//     const info = document.createElement("div");
-//     info.innerHTML = `<p>Name: ${member.name}</p><p>Role: ${member.role}</p><p>Image: ${member.image}</p>`;
-//     cardContainer.appendChild(info);
-//   });
+for (let i = 0; i < team.length; i++) {
+    console.log(
+        team[i].name,
+        team[i].role,
+        team[i].image)
+    }
 
 for (let i = 0; i < team.length; i++) {
     const element = team[i];
